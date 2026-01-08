@@ -1,5 +1,3 @@
-<<<<<<< local
-=======
 # Grocery Price Analysis Pipeline (Fresh Fruits & Vegetables)
 ## 📌 Project Overview
 
