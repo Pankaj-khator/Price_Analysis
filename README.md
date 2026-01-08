@@ -1,11 +1,11 @@
-#Grocery Price Analysis Pipeline (Fresh Fruits & Vegetables)
-##📌 Project Overview
+# Grocery Price Analysis Pipeline (Fresh Fruits & Vegetables)
+## 📌 Project Overview
 
 This project builds an end-to-end data pipeline to extract, store, and analyze grocery product pricing data from multiple Canadian retailers, with an initial focus on the Fresh Fruits and Vegetables category.
 
 The goal is to design a scalable, cloud-based analytics pipeline that supports raw data ingestion, structured transformation, and cross-retailer price comparison using modern data engineering tools.
 
-##🎯 Project Objectives
+## 🎯 Project Objectives
 
 Extract product-level data from retailer APIs (Freshco & No Frills)
 
@@ -19,7 +19,7 @@ Enable retailer-to-retailer price comparison at the product level
 
 Follow analytics engineering best practices (raw → clean → analytics)
 
-##📂 Project Scope
+## 📂 Project Scope
 
 This project currently focuses only on the Fresh Fruits and Vegetables category.
 
@@ -33,21 +33,11 @@ Debugged without unnecessary complexity
 
 The architecture is scalable by design and can be extended to include all product categories in the future with minimal changes to the extraction and transformation logic.
 
-##🧱 Architecture Overview
-Retailer APIs (Freshco / No Frills)
-            ↓
-        Python (VS Code)
-            ↓
-     Raw JSON → Parquet
-            ↓
-     Azure Blob Storage
-            ↓
-         Snowflake
-   (Raw → Clean → Analytics)
-            ↓
-      SQL Analysis
+## 🧱 Architecture Overview
+<img width="330" height="266" alt="Screenshot 2026-01-08 at 1 59 29 PM" src="https://github.com/user-attachments/assets/86674312-8b3a-438f-84d5-96268c8dfe3b" />
 
-##🔧 Technology Stack
+
+## 🔧 Technology Stack
 Layer	Technology
 Extraction	Python, Requests
 Data Format	Parquet (PyArrow)
@@ -57,7 +47,7 @@ Transformation	SQL (Snowflake)
 Analytics	SQL, Power BI
 Version Control	GitHub
 
-##📥 Data Extraction
+## 📥 Data Extraction
 
 Data is extracted via authenticated retailer APIs
 
@@ -79,7 +69,7 @@ Full replay capability
 
 Schema evolution safety
 
-##📦 Storage Strategy (Why Parquet?)
+## 📦 Storage Strategy (Why Parquet?)
 
 Raw data is stored in Parquet format because:
 
@@ -93,7 +83,7 @@ Ideal for cloud-based data lakes
 
 Parquet acts as the single source of truth before transformations.
 
-##❄️ Snowflake Data Model
+## ❄️ Snowflake Data Model
 Raw Layer
 
 Stores raw Parquet data as a single VARIANT column
@@ -124,7 +114,7 @@ Brand
 
 Price & pricing type
 
-##📊 Sample Analysis
+## 📊 Sample Analysis
 
 Example use cases:
 
@@ -136,7 +126,7 @@ Monitoring price volatility by product
 
 Future expansion to basket-level analysis
 
-##🔐 Security & Credentials
+## 🔐 Security & Credentials
 
 API keys and SAS tokens are stored using environment variables
 
@@ -144,7 +134,7 @@ No secrets are committed to GitHub
 
 Azure Blob access uses SAS-based authentication
 
-##🚀 Future Enhancements
+## 🚀 Future Enhancements
 
 Expand ingestion to all product categories
 
@@ -158,7 +148,7 @@ Build Power BI dashboards
 
 Enable historical price trend analysis
 
-##🧠 Key Design Decisions
+## 🧠 Key Design Decisions
 
 Raw-first ingestion to avoid irreversible data loss
 
@@ -168,7 +158,7 @@ Snowflake VARIANT for flexible schema handling
 
 Category scoping for faster validation and learning
 
-##📎 Disclaimer
+## 📎 Disclaimer
 
 This project is built for educational and analytical purposes.
 All data is sourced from publicly accessible APIs and is used strictly for learning and analysis.
