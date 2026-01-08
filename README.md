@@ -1,3 +1,5 @@
+<<<<<<< local
+=======
 # Grocery Price Analysis Pipeline (Fresh Fruits & Vegetables)
 ## 📌 Project Overview
 
@@ -162,3 +164,5 @@ Category scoping for faster validation and learning
 
 This project is built for educational and analytical purposes.
 All data is sourced from publicly accessible APIs and is used strictly for learning and analysis.
+
+>>>>>>> remote
